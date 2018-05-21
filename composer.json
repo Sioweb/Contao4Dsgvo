@@ -1,7 +1,7 @@
 {
     "name": "sioweb/dsgvo",
     "type": "contao-bundle",
-    "description": "Sioweb Media Dsgvo for contao +4",
+    "description": "Adds an invisible checkbox and a nice layer to contact forms; contao +4",
     "license": "LGPL-3.0+",
     "version": "1.0.0",
     "authors": [
