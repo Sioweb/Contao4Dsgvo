@@ -57,9 +57,10 @@
                     selfObj.abort(selfObj,confirmObj);
                 },
                 accept: function(confirmObj) {
-					$dsgvo.attr('checked', true);
+					var $form = confirmObj.item.closest('form');
+					$form.find('[type="checkbox"][name="dsgvo"]').attr('checked', true);
                     selfObj.accept(selfObj,confirmObj);
-					confirmObj.item.closest('form')[0].submit();
+					$form[0].submit();
 				},
 				added: function(confirmObj) {
                     selfObj.added(selfObj,confirmObj);
