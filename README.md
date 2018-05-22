@@ -7,6 +7,7 @@ Das Formular wird allerdings erst abgesendet, nachdem der Benutzer im Modal den 
 ## Installation im Contao Manager
 
 - Suche nach `sioweb/dsgvo`
-- Füge im Seitenlayout das Template `j_dsgvo.html5` hinzu
-- Lege das Eingabefeld `DSGVO Feld` an 
-- Testen
+- Lege das Eingabefeld `DSGVO Feld` an
+- Fülle die DSGVO-Einstellungen aus (Es sind inserttags erlaubt!)
+- Testen (Es müssen alle Pflichtfelder aktiviert werden!)
+    - GGf. funktioniert die Validierung nicht mehr richtig
