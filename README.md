@@ -4,9 +4,10 @@ Dieses Modul erzeugt eine neue Checkbox mit dem Namen "dsgvo". Ein Javascript im
 
 Das Formular wird allerdings erst abgesendet, nachdem der Benutzer im Modal den Datenschutz zur Kentniss genommen hat.
 
-## Installation im Contao Manager
+## Installation
 
-- Suche nach `sioweb/dsgvo`
+- (Contao Manager) Suche nach `sioweb/dsgvo`
+- (Oder über Console) `composer require sioweb/dsgvo`
 - Lege das Eingabefeld `DSGVO Feld` an
 - Fülle die DSGVO-Einstellungen aus (Es sind inserttags erlaubt!)
 - Testen (Es müssen alle Pflichtfelder aktiviert werden!)
