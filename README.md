@@ -4,6 +4,8 @@ Dieses Modul erzeugt eine neue Checkbox mit dem Namen "dsgvo". Ein Javascript im
 
 Das Formular wird allerdings erst abgesendet, nachdem der Benutzer im Modal den Datenschutz zur Kentniss genommen hat.
 
+Vorschau: [https://www.sioweb.de/kontakt.html](https://www.sioweb.de/kontakt.html)
+
 ## UX
 
 Das Modal öffnet sich aus dem Sende-Button heraus. Der Benutzer bekommt nicht das unwohle Gefühl eines Werbe-Popups/Overlay sondern eine direkt zusammenhängende Information. Dadurch ist der Benutzer gezwungen, die Informationen zur kenntniss zu nehmen und kann den Vorgang abbrechen oder akzektieren, indem er fortfährt.
