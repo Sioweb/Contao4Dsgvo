@@ -6,7 +6,9 @@ Das Formular wird allerdings erst abgesendet, nachdem der Benutzer im Modal den 
 
 ## UX
 
-Das Modal öffnet sich aus dem Sende-Button heraus. Der Benutzer bekommt nicht das unwohle Gefühl eines Werbe-Popups/Overlay sondern eine direkt zusammenhängende Information. Dadurch ist der Benutzer gezwungen, die Informationen zur kenntniss zu nehmen und kann den Vorgang abbrechen oder akzektieren, indem er fortfährt. 
+Das Modal öffnet sich aus dem Sende-Button heraus. Der Benutzer bekommt nicht das unwohle Gefühl eines Werbe-Popups/Overlay sondern eine direkt zusammenhängende Information. Dadurch ist der Benutzer gezwungen, die Informationen zur kenntniss zu nehmen und kann den Vorgang abbrechen oder akzektieren, indem er fortfährt.
+
+Der Vorgang wirkt weniger abschreckend, als eine Checkbox-Wüste und kann bequem weitergeklickt werden.
 
 ## Installation
 
@@ -23,7 +25,7 @@ Das Modal öffnet sich aus dem Sende-Button heraus. Der Benutzer bekommt nicht d
     
 ## Hintergrund
 
-Die DSGVO setzt vorraus, dass der Absender ausreichend über Zweck und Dauer der Aufbewahrung aufgeklärt wird. Idealerweise sollte die Einwilligung zu Beweiszwecken dokumentiert werden. Dieses Modul verhindert, dass der Benutzer das Formular ohne Einwilligung absenden kann und weist den Absender in einem zweiten Schritt explizit auf den Datenschutz hin, bevor das Formular tatsächlich abgesendet wird.
+Die DSGVO setzt vorraus, dass der Absender ausreichend über Zweck und Dauer der Datenerhebung aufgeklärt wird. Idealerweise sollte die Einwilligung zu Beweiszwecken dokumentiert werden. Dieses Modul verhindert, dass der Benutzer das Formular ohne Kentnissnahme absenden kann indem es den Absender in einem zweiten Schritt explizit auf den Datenschutz hinweist.
 
 Die Checkbox wird im Hintergrund vor dem Absenden aktiv gesetzt und kann im E-Mail-Template hinterlegt und somit auch dokumentiert werden.
 
