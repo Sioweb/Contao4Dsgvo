@@ -31,8 +31,12 @@ Die Checkbox wird im Hintergrund vor dem Absenden aktiv gesetzt und kann im E-Ma
 
 Sollte `kein Javascript` aktiviert sein, wird die Checkbox ausgegeben. Daher ist es Ratsam das Formular mit Javascript und einmal mit deaktiviertem Javascript (Developer Tools) zu testen.
 
-## Hinweis
+## Rechtliches
 
 1. Es wird keine Gewährleistung gegeben, dass dieses Modul rechtssicher eingesetzt werden kann. Jeder Benutzer ist selbst, für die Rechtsicherheit verantwortlich und muss sich durch einen Rechtsexperten / Berater beraten und absichern lassen.
 
 2. Das Modul legitimiert keine dauerhafte Speicherung der erhobenen Daten und ist nicht gedacht, die Gesetze zu umgehen oder auszuhebeln. Dieses Modul bietet lediglich eine alternative zu Checkboxen.
+
+3. Das Modul wurde erstellt mit der Ansicht, dass eine explizite Information, mit erneutem Auffordern zum Absenden, die gleiche Gewichtung wie eine explizite Checkbox zum Anhaken besitzt.
+
+4. Das Modul ist nicht als Newsletter-Anmeldung geeignet.
