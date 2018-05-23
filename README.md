@@ -37,7 +37,7 @@ Sollte `kein Javascript` aktiviert sein, wird die Checkbox ausgegeben. Daher ist
 
 Der Datenschutz schreibt vor, dass die Daten sparsam erhoben werden. Bei einer reinen Kontaktanfrage sollte daher lediglich die E-Mail als Pflichtfeld eingestellt sein. In diesem Fall erhebt man alle, für die Bearbeitung zwingend benötigten, Daten und braucht meiner Meinung nach keine Einwilligung. Es reicht den Benutzer zu Informieren, wie man mit den erhobenen Daten umgeht.
 
-[Quelle: Datenschutz-Guru](https://www.datenschutz-guru.de/tag/dsgvo-last-minute/page/2/)
+[Quelle: Datenschutz-Guru](https://www.datenschutz-guru.de/last-minute-dsgvo-was-jetzt-getan-werden-muss-teil-1/)
 
 ## Rechtliches
 
