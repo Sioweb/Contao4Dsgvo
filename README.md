@@ -33,6 +33,10 @@ Die Checkbox wird im Hintergrund vor dem Absenden aktiv gesetzt und kann im E-Ma
 
 Sollte `kein Javascript` aktiviert sein, wird die Checkbox ausgegeben. Daher ist es Ratsam das Formular mit Javascript und einmal mit deaktiviertem Javascript (Developer Tools) zu testen.
 
+## Meine Meinung dazu
+
+Der Datenschutz schreibt vor, dass die Daten sparsam erhoben werden. Bei einer reinen Kontaktanfrage sollte daher lediglich die E-Mail als Pflichtfeld eingestellt sein. In diesem Fall erhebt man alle, für die Bearbeitung zwingend benötigten, Daten und braucht meiner Meinung nach keine Einwilligung. Es reicht den Benutzer zu Informieren, wie man mit den erhobenen Daten umgeht.
+
 ## Rechtliches
 
 1. Es wird keine Gewährleistung gegeben, dass dieses Modul rechtssicher eingesetzt werden kann. Jeder Benutzer ist selbst, für die Rechtsicherheit verantwortlich und muss sich durch einen Rechtsexperten / Berater beraten und absichern lassen.
