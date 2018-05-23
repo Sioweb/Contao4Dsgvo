@@ -39,7 +39,7 @@ Der Datenschutz schreibt vor, dass die Daten sparsam erhoben werden. Bei einer r
 
 ## Rechtliches
 
-1. Es wird keine Gewährleistung gegeben, dass dieses Modul rechtssicher eingesetzt werden kann. Jeder Benutzer ist selbst, für die Rechtsicherheit verantwortlich und muss sich durch einen Rechtsexperten / Berater beraten und absichern lassen.
+1. Es wird keine Gewährleistung gegeben, dass dieses Modul, oder diese Readme, rechtssicher eingesetzt werden kann. Jeder Benutzer ist selbst, für die Rechtsicherheit verantwortlich und muss sich durch einen Rechtsexperten / Berater beraten und absichern lassen.
 
 2. Das Modul legitimiert keine dauerhafte Speicherung der erhobenen Daten und ist nicht gedacht, die Gesetze zu umgehen oder auszuhebeln. Dieses Modul bietet lediglich eine alternative zu Checkboxen.
 
