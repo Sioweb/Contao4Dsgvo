@@ -12,11 +12,6 @@
     ],
     "require": {
         "php": ">=5.5.0",
-        "symfony/framework-bundle": "^2.8|^3.0",
-        "contao/core-bundle": "^4.4"
-    },
-    "require-dev": {
-        "contao/manager-plugin": "^2.0"
     },
     "conflict": {
         "contao/core": "*",
@@ -42,9 +37,6 @@
         "preferred-install": "dist"
     },
     "extra": {
-        "branch-alias": {
-            "dev-develop": "4.4.x-dev"
-        },
         "contao-manager-plugin": "Sioweb\\Dsgvo\\ContaoManager\\Plugin"
     }
 }
