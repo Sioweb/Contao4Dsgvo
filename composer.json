@@ -1,8 +1,8 @@
 {
     "name": "sioweb/dsgvo",
     "type": "contao-bundle",
-    "description": "Sioweb Media Dsgvo for contao +4",
-    "license": "LGPL-3.0+",
+    "description": "Sioweb Media Dsgvo for Contao +4",
+    "license": "LGPL-3.0-or-later",
     "version": "1.1.1",
     "authors": [
         {
@@ -12,29 +12,13 @@
     ],
     "require": {
         "php": ">=5.5.0",
-    },
-    "conflict": {
-        "contao/core": "*",
-        "contao/manager-plugin": "<2.0 || >=3.0"
+        "contao/core-bundle": "^4.4",
+        "symfony/http-kernel": "^3.4 || ^4.0"
     },
     "autoload": {
         "psr-4": {
             "Sioweb\\Dsgvo\\": "src/"
         },
-        "classmap": [
-            "src/Resources/contao/"
-        ],
-        "exclude-from-classmap": [
-            "src/Resources/contao/config/",
-            "src/Resources/contao/dca/",
-            "src/Resources/contao/helper/",
-            "src/Resources/contao/languages/",
-            "src/Resources/contao/templates/",
-            "src/Resources/contao/themes/"
-        ]
-    },
-    "config": {
-        "preferred-install": "dist"
     },
     "extra": {
         "contao-manager-plugin": "Sioweb\\Dsgvo\\ContaoManager\\Plugin"
