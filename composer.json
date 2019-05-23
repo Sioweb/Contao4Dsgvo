@@ -3,7 +3,6 @@
     "type": "contao-bundle",
     "description": "Sioweb Media Dsgvo for Contao +4",
     "license": "LGPL-3.0-or-later",
-    "version": "1.1.1",
     "authors": [
         {
             "name": "Sascha Weidner",
@@ -18,7 +17,7 @@
     "autoload": {
         "psr-4": {
             "Sioweb\\Dsgvo\\": "src/"
-        },
+        }
     },
     "extra": {
         "contao-manager-plugin": "Sioweb\\Dsgvo\\ContaoManager\\Plugin"
