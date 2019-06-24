@@ -42,9 +42,10 @@
         };
         
         this.modalPosition = function(confirmObj) {
+			console.log(confirmObj.item.css('max-width'));
             return {
-                width: confirmObj.item.width(),
-                height: confirmObj.item.height(),
+                maxWidth: confirmObj.item.width(),
+                maxHeight: confirmObj.item.height(),
                 bottom: ($(window).height() - (confirmObj.item.offset().top - $(window).scrollTop() + 50)),
                 left: confirmObj.item.offset().left - 20
             };
@@ -86,7 +87,15 @@
 					}
                     
                     selfObj.open(this,selfObj,confirmObj);
-					confirmObj.modal.css(selfObj.modalPosition(confirmObj));
+					confirmObj.modal.css($.extend(true, selfObj.modalPosition(confirmObj), {
+						maxWidth: '',
+						maxHeight: ''
+					}));
+					
+					console.log(confirmObj.modal.find('.sw-modal-inner').width(), confirmObj.modal.find('.sw-modal-inner').height(),$.extend(true, selfObj.modalPosition(confirmObj), {
+						maxWidth: '',
+						maxHeight: ''
+					}));
 
 					return true;
 				}
