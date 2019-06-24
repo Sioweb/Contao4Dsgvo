@@ -42,7 +42,6 @@
         };
         
         this.modalPosition = function(confirmObj) {
-			console.log(confirmObj.item.css('max-width'));
             return {
                 maxWidth: confirmObj.item.width(),
                 maxHeight: confirmObj.item.height(),
@@ -88,11 +87,6 @@
                     
                     selfObj.open(this,selfObj,confirmObj);
 					confirmObj.modal.css($.extend(true, selfObj.modalPosition(confirmObj), {
-						maxWidth: '',
-						maxHeight: ''
-					}));
-					
-					console.log(confirmObj.modal.find('.sw-modal-inner').width(), confirmObj.modal.find('.sw-modal-inner').height(),$.extend(true, selfObj.modalPosition(confirmObj), {
 						maxWidth: '',
 						maxHeight: ''
 					}));
