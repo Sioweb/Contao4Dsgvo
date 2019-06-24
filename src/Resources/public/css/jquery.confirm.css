@@ -4,7 +4,11 @@
 .widget-submit {
   position: relative;
 }
-.ui-modal {
+.sw-modal {
+  top: auto!important;
+  right: auto!important;
+  display: block;
+
   left: 0;
   width: 0;
   height: 0;
@@ -14,7 +18,6 @@
   z-index: -1;
   padding: 20px;
   position: fixed;
-  font-size: 14px;
   overflow: hidden;
   background: #fff;
   border-radius: 3px;
@@ -23,7 +26,7 @@
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.62);
   transition: opacity .3s, top .3s, bottom .3s, width .3s, height .3s, margin .3s, transform .3s ease-out;
 }
-.ui-modal.default {
+.sw-modal.default {
   top: -100%;
   left: 50%;
 
@@ -32,12 +35,12 @@
   -o-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
-.ui-modal.default.open {
+.sw-modal.default.open {
   top: 50%;
   opacity: 1;
 }
 
-.ui-modal.open {
+.sw-modal.open {
   opacity: 1;
   max-width: 92%;
   z-index: 999999;
@@ -49,31 +52,31 @@
   transform: translateY(-100%);*/
 }
 
-.ui-modal .ui-modal-close {
+.sw-modal .sw-modal-close {
   top: 2.4rem;
   width: 2rem;
   right: 2rem;
   height: 2rem;
   position: absolute;
 }
-.ui-modal .ui-modal-close:before {
+.sw-modal .sw-modal-close:before {
   color: #333;
   content: "X";
   cursor: pointer;
 }
-.ui-modal h2 {
+.sw-modal h2 {
   margin-bottom: 1rem;
 }
 
- .ui-modal.sw_drag_over {
+ .sw-modal.sw_drag_over {
   background-color: #eee;
 }
 
- .ui-modal.sw_drag_over .ui-modal-abort{
+ .sw-modal.sw_drag_over .sw-modal-abort{
   opacity: 0;
 }
 
-.ui-modal-abort {
+.sw-modal-abort {
   opacity: 1;
 
   -webkit-transition: opacity .2s;
@@ -83,11 +86,11 @@
   transition: opacity .2s;
 }
 
-.ui-modal-buttons {
+.sw-modal-buttons {
   margin-top: 20px;
 }
 
-.ui-modal-buttons > * {
+.sw-modal-buttons > * {
   color: #eee;
   cursor: pointer;
   background: #333;
@@ -98,18 +101,18 @@
   display: inline-block;
 }
 
-.ui-modal .ui-input {
+.sw-modal .ui-input {
   margin-top: 3rem;
 }
-.ui-modal .ui-input + .ui-input{
+.sw-modal .ui-input + .ui-input{
   margin-top: 2rem;
 }
-.ui-modal .ui-input label {
+.sw-modal .ui-input label {
   line-height: 1.6;
   margin-bottom: .5rem;
 }
 
-.ui-modal .ui-input  input {
+.sw-modal .ui-input  input {
   width: 100%;
   height: 3rem;
   padding: 0 1rem;
@@ -120,7 +123,7 @@
 
 
 @media all and (max-width: 767px) {
-  .ui-modal.open {
+  .sw-modal.open {
     left: 4% !important;
     top: 20px !important;
     height: 80vh !important;
@@ -131,12 +134,12 @@
     transform: translateY(0);
   }
 
-  .ui-modal-button {
+  .sw-modal-button {
     width: 100%;
     margin-bottom: 5px;
   }
 
-  .ui-modal-header {
+  .sw-modal-header {
     overflow: auto;
     max-height: 57vh;
   }

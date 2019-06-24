@@ -30,7 +30,7 @@
 		lazyLoad: false,
 		removeOnClose: false,
 
-		modalClass: 'modal',
+		modalClass: 'dsgvo-modal',
 
 		stopPropagations: false,
 
@@ -143,7 +143,7 @@
 				}
 			});
 
-			selfObj.modal.find('.ui-modal-button-custom').unbind('click').click(function(e){
+			selfObj.modal.find('.sw-modal-button-custom').unbind('click').click(function(e){
 				var $el = $(this),
 					customData = $el.data('custom');
 					
@@ -161,21 +161,21 @@
 				}
 			});
 
-			selfObj.modal.find('.ui-modal-button').click(function(e){
+			selfObj.modal.find('.sw-modal-button').click(function(e){
 				var $el = $(this);
 
 				selfObj.button_pressed($el,selfObj);
 
-				if($el.is('.ui-modal-ok')) {
+				if($el.is('.sw-modal-ok')) {
 					selfObj.inner_accept();
 				}
 
-				if($el.is('.ui-modal-abort')) {
+				if($el.is('.sw-modal-abort')) {
 					selfObj.inner_abort();
 				}
 			});
 
-			selfObj.modal.find('.ui-modal-close').click(function(){
+			selfObj.modal.find('.sw-modal-close').click(function(){
 				selfObj.button_pressed($(this),selfObj);
 				selfObj.inner_abort();
 			});
@@ -192,11 +192,11 @@
 		this.createTemplate = function() {
 			var extraContent = arguments[0]||'';
 			if(!selfObj.template) {
-				selfObj.template = '<div class="ui-modal '+selfObj.modalClass+'" tabindex="1">';
-					selfObj.template += '<div tabindex="3" class="ui-modal-close"></div>';
-					selfObj.template += '<div class="ui-modal-inner inner">';
+				selfObj.template = '<div class="sw-modal '+selfObj.modalClass+'" tabindex="1">';
+					selfObj.template += '<div tabindex="3" class="sw-modal-close"></div>';
+					selfObj.template += '<div class="sw-modal-inner inner">';
 						if(selfObj.addHeader) {
-							selfObj.template += '<div class="ui-modal-header">';
+							selfObj.template += '<div class="sw-modal-header">';
 								selfObj.template += '<h2>'+selfObj.title+'</h2>';
 								selfObj.template += '<p>'+selfObj.content+'</p>';
 							selfObj.template += '</div>';
@@ -222,22 +222,22 @@
 						}
 
 						if(extraContent) {
-							selfObj.template += '<div class="ui-modal-content">';
+							selfObj.template += '<div class="sw-modal-content">';
 								selfObj.template += extraContent;
 							selfObj.template += '</div>';
 						}
 
 						if(selfObj.addButtons) {
-							selfObj.template += '<div class="ui-modal-buttons">'
+							selfObj.template += '<div class="sw-modal-buttons">'
 								if(selfObj.button_accept) {
-									selfObj.template += '<div class="ui-modal-button ui-modal-ok">'+selfObj.button_accept+'</div>';
+									selfObj.template += '<div class="sw-modal-button sw-modal-ok">'+selfObj.button_accept+'</div>';
 								}
 								if(selfObj.button_abort) {
-									selfObj.template += '<div class="ui-modal-button ui-modal-abort">'+selfObj.button_abort+'</div>';
+									selfObj.template += '<div class="sw-modal-button sw-modal-abort">'+selfObj.button_abort+'</div>';
 								}
 								if(selfObj.custom_buttons) {
 									for(var button in selfObj.custom_buttons) {
-										selfObj.template += '<div class="ui-modal-button-custom ui-modal-custom-'+button+'" data-custom="'+button+'">';
+										selfObj.template += '<div class="sw-modal-button-custom sw-modal-custom-'+button+'" data-custom="'+button+'">';
 											if(selfObj.custom_buttons[button].link !== undefined) {
 												selfObj.template += '<a data-custom="'+button+'" href="'+selfObj.custom_buttons[button].link+'"'+(selfObj.custom_buttons[button].target?' target="'+selfObj.custom_buttons[button].target+'"':'')+'>';
 											}
@@ -262,7 +262,7 @@
 		};
 
 		this.getPerventKey = function() {
-			return 'ui-modal-prevent-reopening'+(selfObj.reopeningKey?'-'+selfObj.reopeningKey:'');
+			return 'sw-modal-prevent-reopening'+(selfObj.reopeningKey?'-'+selfObj.reopeningKey:'');
 		};
 
 		this.checkPreventKey = function() {
@@ -321,12 +321,19 @@
 				$(this).trigger('confirm.keyup',e);
 			});
 
+			var onOpen = selfObj.open(selfObj);
+			
 			setTimeout(function() {  
-				var onOpen = selfObj.open(selfObj);
 				if(onOpen === undefined || onOpen) {
 					selfObj.modal.addClass('open');
 				}
 			},100);
+
+			if(onOpen === undefined || !onOpen) {
+				return false;
+			}
+
+			return true;
 		}
 
 		this.disable = function() {
@@ -340,18 +347,17 @@
 
 		this.update = function(data) {
 			if(data.title !== undefined) {
-				selfObj.modal.find('.ui-modal-title').html(data.title);
+				selfObj.modal.find('.sw-modal-title').html(data.title);
 			}
 			if(data.content !== undefined) {
-				selfObj.modal.find('.ui-modal-content').html(data.content);
+				selfObj.modal.find('.sw-modal-content').html(data.content);
 			}
 		};
 
 		this.loaded = function() {
 			if(selfObj.lazyLoad && selfObj.url !== null) {
 				selfObj.item.unbind(selfObj.on).bind(selfObj.on,function(e){
-					e.preventDefault();
-					e.stopPropagation();
+					
 
 					if(!selfObj.modal) {
 						$.ajax($.extend(selfObj.ajaxOptions,{
@@ -359,14 +365,17 @@
 							success: function(content) {
 								selfObj.createTemplate(content);
 								selfObj.addModal();
-								$('.ui-modal').removeClass('open');
+								$('.sw-modal').removeClass('open');
 								selfObj.inner_open();
 								selfObj.ajaxSuccess(selfObj,content);
 							}
 						}));
+						e.stopPropagation();
 					} else {
-						$('.ui-modal').removeClass('open');
-						selfObj.inner_open();
+						$('.sw-modal').removeClass('open');
+						if(selfObj.inner_open()) {
+							e.preventDefault();
+						}
 					}
 				});
 			} else if(selfObj.lazyLoad && selfObj.url === null && !this.isHTML) {
@@ -376,7 +385,7 @@
 
 					selfObj.createTemplate();
 					selfObj.addModal();
-					$('.ui-modal').removeClass('open');
+					$('.sw-modal').removeClass('open');
 					selfObj.inner_open();
 				});
 			} else {
@@ -387,17 +396,18 @@
 		this.modalHandlers = function() {
 			if(!this.isHTML) {
 				selfObj.item.unbind(selfObj.on).on(selfObj.on,function(e){
-					e.preventDefault();
 					e.stopPropagation();
 					if(selfObj.modal !== null) {
 						selfObj.defaultAction(e,this,selfObj);
 
-						$('.ui-modal').removeClass('open');
-						selfObj.inner_open();
+						$('.sw-modal').removeClass('open');
+						if(selfObj.inner_open()) {
+							e.preventDefault();
+						}
 					}
 				});
 			} else {
-				$('.ui-modal').removeClass('open');
+				$('.sw-modal').removeClass('open');
 				selfObj.inner_open();
 			}
 		};

@@ -8,6 +8,8 @@
 
 	/* Enter PluginOptions */
 	$[pluginName+'Default'] = {
+		form: 'form',
+		submitButtton: 'form [type="sumbit"]',
 		container: 'closest:.widget',
         title: 'Kurz zum Datenschutz',
         content: 'Mit dem Absenden des Formulares stimmst Du zu, dass Deine Angaben aus dem Kontaktformular zur Beantwortung Deiner Anfrage von Sioweb erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Deiner Anfrage gelöscht.',
@@ -33,7 +35,9 @@
 			this.elem = elem;
 			this.item = $(this.elem);
 			this.isHTML = selfObj.elem.tagName.toLowerCase() === 'html';
-            
+
+			this.valid = false;
+
             this.loaded();
         };
         
@@ -47,7 +51,7 @@
         };
 
 		this.loaded = function() {
-            selfObj.item.confirm({
+            selfObj.submitButtton.confirm({
                 container: selfObj.container,
                 title: selfObj.title,
                 content: selfObj.content,
@@ -72,7 +76,7 @@
 					
 					$required.each(function() {
 						if($(this).val() === '') {
-                            valid = false;
+							valid = false;
                             selfObj.invalid(this,selfObj,confirmObj);
 						}
 					});
@@ -83,6 +87,8 @@
                     
                     selfObj.open(this,selfObj,confirmObj);
 					confirmObj.modal.css(selfObj.modalPosition(confirmObj));
+
+					return true;
 				}
             });
 		};
