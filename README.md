@@ -6,6 +6,12 @@ Das Formular wird allerdings erst abgesendet, nachdem der Benutzer im Modal den 
 
 Vorschau: [https://www.sioweb.de/kontakt.html](https://www.sioweb.de/kontakt.html)
 
+## Updates
+
+### 24.06.2019
+
+- (deleted) src/Resources/contao/templates/j_dsgvo.html5; Diese Datei muss nicht mehr eingebunden werden, das Scripts wird direkt aus dem Template heraus aufgerufen.
+
 ## UX
 
 Das Modal öffnet sich aus dem Sende-Button heraus. Der Benutzer bekommt nicht das unwohle Gefühl eines Werbe-Popups/Overlay sondern eine direkt zusammenhängende Information. Dadurch ist der Benutzer gezwungen, die Informationen zur kenntniss zu nehmen und kann den Vorgang abbrechen oder akzektieren, indem er fortfährt.
