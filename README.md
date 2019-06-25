@@ -10,7 +10,10 @@ Vorschau: [https://www.sioweb.de/kontakt.html](https://www.sioweb.de/kontakt.htm
 
 ### 24.06.2019
 
-- (deleted) src/Resources/contao/templates/j_dsgvo.html5; Diese Datei muss nicht mehr eingebunden werden, das Scripts wird direkt aus dem Template heraus aufgerufen.
+#### Deleted
+
+- src/Resources/contao/templates/j_dsgvo.html5;
+    - Diese Datei muss nicht mehr eingebunden werden, das Scripts wird direkt aus dem Template heraus aufgerufen.
 
 ## UX
 
