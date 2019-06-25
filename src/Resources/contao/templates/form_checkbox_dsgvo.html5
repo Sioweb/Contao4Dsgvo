@@ -61,10 +61,13 @@
             button_abort: '<?= $this->getModalAbort()?>'
           })
         });});
-      if(window.loadDsgvo === undefined) {
+      if(window.loadDsgvo === undefined && window['jQuery'] !== undefined) {
         document.getElementById('opt_<?= $option['id'] ?>').required = false;
         executeDsgvo(jQuery);
       } else {
+        if(window.loadDsgvo === undefined) {
+          window.loadDsgvo = [];
+        }
         window.loadDsgvo.push(function() {document.getElementById('opt_<?= $option['id'] ?>').required = false;});
         window.loadDsgvo.push(executeDsgvo);
       }
