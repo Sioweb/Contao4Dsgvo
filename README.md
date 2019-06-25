@@ -4,7 +4,7 @@ Dieses Modul erzeugt eine neue Checkbox mit dem Namen "dsgvo". Ein Javascript im
 
 Das Formular wird allerdings erst abgesendet, nachdem der Benutzer im Modal den Datenschutz zur Kentniss genommen hat.
 
-Vorschau: [https://www.sioweb.de/kontakt.html](https://www.sioweb.de/kontakt.html)
+Vorschau: [https://www.sioweb.de/kontakt.html](https://www.sioweb.de/kontakt.html?dsgvo=1)
 
 ## Updates
 
