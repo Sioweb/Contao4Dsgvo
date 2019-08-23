@@ -10,9 +10,11 @@
         }
     ],
     "require": {
-        "php": ">=5.5.0",
+        "php": ">=7.0",
         "contao/core-bundle": "^4.4",
-        "symfony/http-kernel": "^3.4 || ^4.0"
+    },
+    "require-dev": {
+        "sioweb/apply_environment": "*"
     },
     "autoload": {
         "psr-4": {
@@ -21,5 +23,11 @@
     },
     "extra": {
         "contao-manager-plugin": "Sioweb\\Dsgvo\\ContaoManager\\Plugin"
+    },
+    "scripts": {
+        "package-scripts": [
+            "@config.localhost==1",
+            "Sioweb\\ApplyEnvironment\\Composer\\Git::init --repository=git@gitlab.com:SiowebContao/Modules/Hub.git"
+        ]
     }
 }
